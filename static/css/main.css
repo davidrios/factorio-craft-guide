@@ -1,0 +1,9 @@
+#item-info-table > thead > tr > th,
+#item-info-table > tbody > tr > td {
+	text-align: right;
+}
+
+#item-info-table > thead > tr > th:first-child,
+#item-info-table > tbody > tr > td:first-child {
+	text-align: left;
+}
