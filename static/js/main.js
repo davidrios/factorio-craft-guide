@@ -50,19 +50,7 @@ var factorio = {
       factorio.redrawTable()
     })
   },
-  getItemWithComponents (id, mode, lastCraftLevel, neededQty) {
-    if (lastCraftLevel == null) {
-      lastCraftLevel = 0
-    }
-
-    if (neededQty == null) {
-      neededQty = 1
-    }
-
-    if (mode == null) {
-      mode = 'normal'
-    }
-
+  getItemWithComponents (id, mode = 'normal', lastCraftLevel = 0, neededQty = 1) {
     const craftLevel = lastCraftLevel + 1
 
     let itemsList = []
