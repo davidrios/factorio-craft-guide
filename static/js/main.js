@@ -1,6 +1,7 @@
 var factorio = {
   db: {},
   locale: {},
+  selectedRecipes: {},
   setup () {
     document.getElementsByTagName('body')[0].classList.add('loading', 'loading-lg')
     Promise
@@ -27,6 +28,7 @@ var factorio = {
   setupInputs () {
     const el = document.getElementById('item-select')
     el.addEventListener('change', function (ev) {
+      factorio.selectedRecipes = {}
       factorio.redrawTable()
     })
 
@@ -50,18 +52,20 @@ var factorio = {
       factorio.redrawTable()
     })
   },
-  getItemWithComponents (id, mode = 'normal', lastCraftLevel = 0, neededQty = 1) {
+  getItemWithComponents (id, mode = 'normal', selectedRecipes = {}, lastCraftLevel = 0, neededQty = 1, lastIndex = -1) {
     const craftLevel = lastCraftLevel + 1
+    let index = lastIndex + 1
 
     let itemsList = []
 
     const recipes = factorio.db.items[id]
-    const recipeId = recipes[0]
+    const recipeId = selectedRecipes[index] || recipes[0]
     const recipe = factorio.db.recipes[recipeId]
 
     const item = {
       id: id,
-      name: factorio.locale[id] + (recipes.length > 1 ? ` (by ${factorio.locale[recipeId] || recipeId})` : ''),
+      name: factorio.locale[id],
+      index: index,
       craftLevel: craftLevel,
       neededQty: neededQty,
       recipe: {
@@ -81,10 +85,14 @@ var factorio = {
         factorio.getItemWithComponents(
           ingrId,
           mode,
+          selectedRecipes,
           craftLevel,
-          (ingrQty / itemCraftAmount) * neededQty
+          (ingrQty / itemCraftAmount) * neededQty,
+          index
         )
       )
+
+      index = itemsList[itemsList.length - 1].index
     }
 
     return itemsList
@@ -98,7 +106,11 @@ var factorio = {
       return
     }
 
-    const itemWithComponents = factorio.getItemWithComponents(itemName, document.getElementById('mode-select').value)
+    const itemWithComponents = factorio.getItemWithComponents(
+      itemName,
+      document.getElementById('mode-select').value,
+      factorio.selectedRecipes
+    )
     let desiredQty = parseFloat(document.getElementById('desired-qty').value)
     if (document.getElementById('desired-qty-time-unit').value === 'min') {
       desiredQty = desiredQty / 60
@@ -111,7 +123,35 @@ var factorio = {
     for (const item of itemWithComponents) {
       const row = tbody.insertRow()
 
-      row.insertCell(-1).textContent = item.craftLevel === 1 ? item.name : `${' '.repeat(item.craftLevel - 2)}↳ ${item.name}`
+      const itemNameCell = row.insertCell(-1)
+      itemNameCell.textContent = item.craftLevel === 1 ? item.name : `${' '.repeat(item.craftLevel - 2)}↳ ${item.name}`
+      if (item.alternativeRecipes.length > 1) {
+        itemNameCell.appendChild(document.createTextNode(' '))
+
+        const select = document.createElement('select')
+        select.name = `select-recipe-${item.craftLevel}`
+
+        for (const alternativeRecipe of item.alternativeRecipes) {
+          const option = document.createElement('option')
+          option.text = factorio.locale[alternativeRecipe] || alternativeRecipe
+          option.value = alternativeRecipe
+          option.selected = factorio.selectedRecipes[item.index] === alternativeRecipe
+          select.add(option)
+        }
+
+        select.addEventListener('change', function () {
+          factorio.selectedRecipes[item.index] = select.value
+          for (const selectedIndex in factorio.selectedRecipes) {
+            if (selectedIndex > item.index) {
+              delete factorio.selectedRecipes[selectedIndex]
+            }
+          }
+          factorio.redrawTable()
+        })
+
+        itemNameCell.appendChild(select)
+      }
+
       row.insertCell(-1).textContent = item.recipe.time.toFixed(2)
       row.insertCell(-1).textContent = item.recipe.results[item.id]
 

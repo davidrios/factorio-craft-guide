@@ -53,6 +53,28 @@
           "crude-oil": 10
         }
       }
+    },
+    "steam-from-heat-exchanger": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "water": 103
+        },
+        "results": {
+          "steam": 103
+        }
+      }
+    },
+    "steam-from-boiler": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "water": 60
+        },
+        "results": {
+          "steam": 60
+        }
+      }
     }
   },
   "items": {
@@ -61,6 +83,7 @@
     "copper-ore": ["copper-mining"],
     "coal": ["coal-mining"],
     "stone": ["stone-mining"],
-    "crude-oil": ["extract-crude-oil"]
+    "crude-oil": ["extract-crude-oil"],
+    "steam": ["steam-from-boiler", "steam-from-heat-exchanger"]
   }
 }
