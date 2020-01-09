@@ -67,18 +67,20 @@ var factorio = {
 
     let itemsList = []
 
-    const recipeId = factorio.db.items[id][0]
+    const recipes = factorio.db.items[id]
+    const recipeId = recipes[0]
     const recipe = factorio.db.recipes[recipeId]
 
     const item = {
       id: id,
-      name: factorio.locale[id],
+      name: factorio.locale[id] + (recipes.length > 1 ? ` (by ${factorio.locale[recipeId] || recipeId})` : ''),
       craftLevel: craftLevel,
       neededQty: neededQty,
       recipe: {
         id: recipeId,
         ...(recipe[mode] != null ? recipe[mode] : recipe.normal)
-      }
+      },
+      alternativeRecipes: recipes
     }
 
     itemsList.push(item)
