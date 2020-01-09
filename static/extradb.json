@@ -75,6 +75,18 @@
           "steam": 60
         }
       }
+    },
+    "satellite-launch": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "rocket-part": 100,
+          "satellite": 1
+        },
+        "results": {
+          "space-science-pack": 1000
+        }
+      }
     }
   },
   "items": {
@@ -84,6 +96,7 @@
     "coal": ["coal-mining"],
     "stone": ["stone-mining"],
     "crude-oil": ["extract-crude-oil"],
-    "steam": ["steam-from-boiler", "steam-from-heat-exchanger"]
+    "steam": ["steam-from-boiler", "steam-from-heat-exchanger"],
+    "space-science-pack": ["satellite-launch"]
   }
 }
