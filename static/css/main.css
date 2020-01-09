@@ -7,3 +7,7 @@
 #item-info-table > tbody > tr > td:first-child {
 	text-align: left;
 }
+
+body {
+	margin: 1em;
+}
