@@ -84,12 +84,15 @@ var factorio = {
     itemsList.push(item)
 
     for (var ingrId in item.recipe.ingredients) {
+      const ingrQty = item.recipe.ingredients[ingrId]
+      const itemCraftAmount = item.recipe.results[item.id]
+
       itemsList = itemsList.concat(
         factorio.getItemWithComponents(
           ingrId,
           mode,
           craftLevel,
-          neededQty * item.recipe.ingredients[ingrId]
+          (ingrQty / itemCraftAmount) * neededQty
         )
       )
     }
