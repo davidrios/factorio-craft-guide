@@ -31,3 +31,11 @@ th .popover .popover-container {
 	top: -1em !important;
 	right: -1em !important;
 }
+
+#selection-bar > .columns > .column.col-2 {
+	min-width: 20em;
+}
+
+#selection-bar > .columns > .column.col-3 {
+	min-width: 30em;
+}
