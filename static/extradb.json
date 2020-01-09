@@ -1,0 +1,56 @@
+{
+  "recipes": {
+    "water-pumping": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "water": 1200
+        }
+      }
+    },
+    "iron-mining": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "iron-ore": 1
+        }
+      }
+    },
+    "copper-mining": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "copper-ore": 1
+        }
+      }
+    },
+    "coal-mining": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "coal": 1
+        }
+      }
+    },
+    "stone-mining": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "stone": 1
+        }
+      }
+    }
+  },
+  "items": {
+    "water": ["water-pumping"],
+    "iron-ore": ["iron-mining"],
+    "copper-ore": ["copper-mining"],
+    "coal": ["coal-mining"],
+    "stone": ["stone-mining"]
+  }
+}
