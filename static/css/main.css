@@ -26,3 +26,8 @@ th .popover .popover-container {
 	left: -10em;
 	top: 15em;
 }
+
+.github-fork-ribbon {
+	top: -1em !important;
+	right: -1em !important;
+}
