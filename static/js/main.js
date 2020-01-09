@@ -6,9 +6,9 @@ var factorio = {
     document.getElementsByTagName('body')[0].classList.add('loading', 'loading-lg')
     Promise
       .all([
-        fetch('/static/basedb.json'),
-        fetch('/static/extradb.json'),
-        fetch('/static/locale-en.json')
+        fetch('static/basedb.json'),
+        fetch('static/extradb.json'),
+        fetch('static/locale-en.json')
       ])
       .then((values) => {
         Promise
