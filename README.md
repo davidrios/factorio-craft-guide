@@ -35,3 +35,16 @@ Showing the crafting speed of the main assembly machine:
 And the output shown in-game:
 
 ![](docs/example-game-output.jpg)
+
+
+## Development
+
+The code for the web tool is very simple and is written in plain modern JavaScript, so it only works in recent browsers. It uses a couple of JSON databases that can be generated from game files using Python and Lua scripts.
+
+First you need to convert game data to JSON, then process to the format used in the app.
+
+To convert game data to JSON, first copy game files `Factorio\data\core\lualib\dataloader.lua`, `Factorio\data\base\locale\en\base.cfg` and the whole folder `recipe` from `Factorio\data\base\prototypes` to the `game-sources` directory. You can change the locale file if you want the items to be shown in the language you play the game, for instance you would copy `Factorio\data\base\locale\pt-BR\base.cfg` to show the brazilian item names.
+
+Then from inside the `game-sources` folder, execute `lua printjson.lua > data.json` to convert the game data to JSON, then execute `python makedb.py` to convert game data and locale to the format needed. Now copy the files `locale.json` and `basedb.json` to `<repo_dir>\static`.
+
+To serve the files using Python just execute `python -m http.server` from the repository root folder and access http://localhost:8000.
