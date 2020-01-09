@@ -44,6 +44,15 @@
           "stone": 1
         }
       }
+    },
+    "extract-crude-oil": {
+      "normal": {
+        "time": 1,
+        "ingredients": {},
+        "results": {
+          "crude-oil": 10
+        }
+      }
     }
   },
   "items": {
@@ -51,6 +60,7 @@
     "iron-ore": ["iron-mining"],
     "copper-ore": ["copper-mining"],
     "coal": ["coal-mining"],
-    "stone": ["stone-mining"]
+    "stone": ["stone-mining"],
+    "crude-oil": ["extract-crude-oil"]
   }
 }
