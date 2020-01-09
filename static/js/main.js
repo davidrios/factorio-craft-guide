@@ -111,15 +111,42 @@ var factorio = {
       return
     }
 
-    const itemWithComponents = factorio.getItemWithComponents(
+    let itemWithComponents = factorio.getItemWithComponents(
       itemName,
       document.getElementById('mode-select').value,
       factorio.selectedRecipes
     )
     let desiredQty = parseFloat(document.getElementById('desired-qty').value)
+    if (isNaN(desiredQty)) {
+      desiredQty = 0
+    }
     if (document.getElementById('desired-qty-time-unit').value === 'min') {
       desiredQty = desiredQty / 60
     }
+
+    const aggregated = {}
+    for (const item of itemWithComponents) {
+      if (aggregated[item.id] == null) {
+        aggregated[item.id] = { ...item, craftLevel: 2, alternativeRecipes: [] }
+        continue
+      }
+
+      aggregated[item.id].neededQty += item.neededQty
+    }
+
+    itemWithComponents.push({ id: '_aggregated' })
+
+    let lastIndex = itemWithComponents[itemWithComponents.length - 1].index
+    itemWithComponents = itemWithComponents.concat(
+      Object
+        .values(aggregated)
+        .map(item => {
+          lastIndex += 1
+          item.index = lastIndex
+          return item
+        })
+        .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
+    )
 
     const mainItem = itemWithComponents[0]
     const mainProductCraftPS = mainItem.recipe.results[mainItem.id] / mainItem.recipe.time
@@ -129,6 +156,13 @@ var factorio = {
       const row = tbody.insertRow()
 
       const itemNameCell = row.insertCell(-1)
+
+      if (item.id === '_aggregated') {
+        itemNameCell.innerHTML = '<strong>Aggregated</strong>'
+        itemNameCell.colSpan = 8
+        continue
+      }
+
       itemNameCell.textContent = item.craftLevel === 1 ? item.name : `${' '.repeat(item.craftLevel - 2)}↳ ${item.name}`
       if (item.alternativeRecipes.length > 1) {
         itemNameCell.appendChild(document.createTextNode(' '))
