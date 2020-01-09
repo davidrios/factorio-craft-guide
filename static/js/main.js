@@ -32,7 +32,12 @@ var factorio = {
       factorio.redrawTable()
     })
 
-    for (const [itemName, itemId] of Object.keys(factorio.db.items).map(itemId => [factorio.locale[itemId] || itemId, itemId]).sort()) {
+    const sortedItems = Object
+      .keys(factorio.db.items)
+      .map(itemId => [factorio.locale[itemId] || itemId, itemId])
+      .sort((a, b) => a[0].localeCompare(b[0]))
+
+    for (const [itemName, itemId] of sortedItems) {
       const option = document.createElement('option')
       option.text = itemName
       option.value = itemId
