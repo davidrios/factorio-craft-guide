@@ -50,7 +50,7 @@ var factorio = {
       factorio.redrawTable()
     })
   },
-  getItemWithComponents (name, lastCraftLevel, neededQty) {
+  getItemWithComponents (id, mode, lastCraftLevel, neededQty) {
     if (lastCraftLevel == null) {
       lastCraftLevel = 0
     }
@@ -59,15 +59,39 @@ var factorio = {
       neededQty = 1
     }
 
+    if (mode == null) {
+      mode = 'normal'
+    }
+
     const craftLevel = lastCraftLevel + 1
 
     let itemsList = []
 
-    const item = { name: name, craftLevel: craftLevel, neededQty: neededQty, ...factorioDb[name] }
+    const recipeId = factorio.db.items[id][0]
+    const recipe = factorio.db.recipes[recipeId]
+
+    const item = {
+      id: id,
+      name: factorio.locale[id],
+      craftLevel: craftLevel,
+      neededQty: neededQty,
+      recipe: {
+        id: recipeId,
+        ...(recipe[mode] != null ? recipe[mode] : recipe.normal)
+      }
+    }
+
     itemsList.push(item)
 
-    for (var componentName in item.components) {
-      itemsList = itemsList.concat(factorio.getItemWithComponents(componentName, craftLevel, neededQty * item.components[componentName]))
+    for (var ingrId in item.recipe.ingredients) {
+      itemsList = itemsList.concat(
+        factorio.getItemWithComponents(
+          ingrId,
+          mode,
+          craftLevel,
+          neededQty * item.recipe.ingredients[ingrId]
+        )
+      )
     }
 
     return itemsList
@@ -81,28 +105,28 @@ var factorio = {
       return
     }
 
-    const itemWithComponents = factorio.getItemWithComponents(itemName)
+    const itemWithComponents = factorio.getItemWithComponents(itemName, document.getElementById('mode-select').value)
     let desiredQty = parseFloat(document.getElementById('desired-qty').value)
     if (document.getElementById('desired-qty-time-unit').value === 'min') {
       desiredQty = desiredQty / 60
     }
 
     const mainItem = itemWithComponents[0]
-    const mainProductCraftPS = mainItem.craftQty / mainItem.craftTime
+    const mainProductCraftPS = mainItem.recipe.results[mainItem.id] / mainItem.recipe.time
     const productionSpeed = desiredQty / mainProductCraftPS
 
     for (const item of itemWithComponents) {
       const row = tbody.insertRow()
 
       row.insertCell(-1).textContent = item.craftLevel === 1 ? item.name : `${' '.repeat(item.craftLevel - 2)}↳ ${item.name}`
-      row.insertCell(-1).textContent = item.craftTime.toFixed(2)
-      row.insertCell(-1).textContent = item.craftQty
+      row.insertCell(-1).textContent = item.recipe.time.toFixed(2)
+      row.insertCell(-1).textContent = item.recipe.results[item.id]
 
-      const itemCraftPS = item.craftQty / item.craftTime
+      const itemCraftPS = item.recipe.results[item.id] / item.recipe.time
       row.insertCell(-1).textContent = itemCraftPS.toFixed(2)
       row.insertCell(-1).textContent = item.neededQty.toFixed(2)
 
-      const prodPS = ((item.neededQty * mainProductCraftPS) / mainItem.craftQty) * productionSpeed
+      const prodPS = ((item.neededQty * mainProductCraftPS) / mainItem.recipe.results[mainItem.id]) * productionSpeed
       row.insertCell(-1).textContent = prodPS.toFixed(2)
       row.insertCell(-1).textContent = (prodPS * 60).toFixed(2)
 
