@@ -37,6 +37,9 @@ And the output shown in-game:
 ![](docs/example-game-output.jpg)
 
 
+The tool also support selecting the recipe used to craft the item, and with that you can find the most resource-efficient way of crafting something. For instance, a way to craft solid fuel using less crude oil is using light oil, get the light oil from heavy oil cracking, getting the heavy oil from coal liquefaction and getting the initial heavy oil from advanced oil processing.
+
+
 ## Development
 
 The code for the web tool is very simple and is written in plain modern JavaScript, so it only works in recent browsers. It uses a couple of JSON databases that can be generated from game files using Python and Lua scripts.
