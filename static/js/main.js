@@ -52,7 +52,7 @@ var factorio = {
       factorio.redrawTable()
     })
   },
-  getItemWithComponents (id, mode = 'normal', selectedRecipes = {}, lastCraftLevel = 0, neededQty = 1, lastIndex = -1) {
+  getItemWithComponents (id, mode = 'normal', selectedRecipes = {}, lastCraftLevel = 0, neededQty = null, lastIndex = -1) {
     const craftLevel = lastCraftLevel + 1
     let index = lastIndex + 1
 
@@ -61,6 +61,11 @@ var factorio = {
     const recipes = factorio.db.items[id]
     const recipeId = selectedRecipes[index] || recipes[0]
     const recipe = factorio.db.recipes[recipeId]
+    const recipeMode = (recipe[mode] != null ? recipe[mode] : recipe.normal)
+
+    if (neededQty == null) {
+      neededQty = recipeMode.results[id]
+    }
 
     const item = {
       id: id,
@@ -70,7 +75,7 @@ var factorio = {
       neededQty: neededQty,
       recipe: {
         id: recipeId,
-        ...(recipe[mode] != null ? recipe[mode] : recipe.normal)
+        ...recipeMode
       },
       alternativeRecipes: recipes
     }
