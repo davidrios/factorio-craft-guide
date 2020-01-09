@@ -8,7 +8,7 @@ var factorio = {
       .all([
         fetch('static/basedb.json'),
         fetch('static/extradb.json'),
-        fetch('static/locale-en.json')
+        fetch('static/locale.json')
       ])
       .then((values) => {
         Promise

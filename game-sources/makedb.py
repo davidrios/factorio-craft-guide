@@ -3,7 +3,7 @@ from configparser import RawConfigParser
 from collections import defaultdict
 
 locale = RawConfigParser()
-locale.read(['locale-en.cfg'])
+locale.read(['base.cfg'], encoding='utf8')
 
 locale_names = {}
 
@@ -11,7 +11,7 @@ for section_name in ['entity-name', 'item-name', 'recipe-name', 'fluid-name', 'e
     for option in locale.options(section_name):
         locale_names[option] = locale.get(section_name, option)
 
-json.dump(locale_names, open('locale-en.json', 'w'), indent=2)
+json.dump(locale_names, open('locale.json', 'w'), indent=2)
 
 
 basedata = json.loads(open('data.json', 'rb').read().decode('utf16'))
