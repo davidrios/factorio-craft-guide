@@ -19,13 +19,13 @@ basedata = json.loads(open('data.json', 'rb').read().decode('utf16'))
 db = {'recipes': {}, 'items': defaultdict(list)}
 
 for recipe_name, data in basedata['recipe'].items():
+    recipe = {}
+
     for mod in ['normal', 'expensive']:
         if mod != 'normal' and mod not in data:
             continue
 
         mod_data = data.get(mod, data)
-
-        recipe_name = '{}:{}'.format(recipe_name, mod) if mod != 'normal' else recipe_name
 
         ingredients = {}
 
@@ -46,16 +46,16 @@ for recipe_name, data in basedata['recipe'].items():
             else:
                 results[result[0]] = result[1]
 
-        recipe = {
+        recipe[mod] = {
             'time': mod_data.get('energy_required', 0.5),
             'ingredients': ingredients,
             'results': results
         }
 
-        db['recipes'][recipe_name] = recipe
+    db['recipes'][recipe_name] = recipe
 
-        for resname, qty in recipe['results'].items():
-            db['items'][resname].append(recipe_name)
+    for resname, qty in recipe['normal']['results'].items():
+        db['items'][resname].append(recipe_name)
 
 
 json.dump(db, open('basedb.json', 'w'), indent=2)
