@@ -1,5 +1,1 @@
-game-sources/recipe
-game-sources/dataloader.lua
-game-sources/*.cfg
-game-sources/*.json
-static/*.json
+game-sources

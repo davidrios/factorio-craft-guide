@@ -1,0 +1,3317 @@
+{
+  "recipes": {
+    "constant-combinator": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "copper-cable": 5,
+          "electronic-circuit": 2
+        },
+        "results": {
+          "constant-combinator": 1
+        }
+      }
+    },
+    "advanced-oil-processing": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "water": 50,
+          "crude-oil": 100
+        },
+        "results": {
+          "heavy-oil": 25,
+          "light-oil": 45,
+          "petroleum-gas": 55
+        }
+      }
+    },
+    "concrete": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "stone-brick": 5,
+          "iron-ore": 1,
+          "water": 100
+        },
+        "results": {
+          "concrete": 10
+        }
+      }
+    },
+    "stone-wall": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone-brick": 5
+        },
+        "results": {
+          "stone-wall": 1
+        }
+      }
+    },
+    "power-armor": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "processing-unit": 40,
+          "electric-engine-unit": 20,
+          "steel-plate": 40
+        },
+        "results": {
+          "power-armor": 1
+        }
+      }
+    },
+    "iron-stick": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 1
+        },
+        "results": {
+          "iron-stick": 2
+        }
+      }
+    },
+    "pumpjack": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "steel-plate": 5,
+          "iron-gear-wheel": 10,
+          "electronic-circuit": 5,
+          "pipe": 10
+        },
+        "results": {
+          "pumpjack": 1
+        }
+      }
+    },
+    "steel-plate": {
+      "normal": {
+        "time": 16,
+        "ingredients": {
+          "iron-plate": 5
+        },
+        "results": {
+          "steel-plate": 1
+        }
+      },
+      "expensive": {
+        "time": 32,
+        "ingredients": {
+          "iron-plate": 10
+        },
+        "results": {
+          "steel-plate": 1
+        }
+      }
+    },
+    "copper-plate": {
+      "normal": {
+        "time": 3.2,
+        "ingredients": {
+          "copper-ore": 1
+        },
+        "results": {
+          "copper-plate": 1
+        }
+      }
+    },
+    "personal-roboport-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "advanced-circuit": 10,
+          "iron-gear-wheel": 40,
+          "steel-plate": 20,
+          "battery": 45
+        },
+        "results": {
+          "personal-roboport-equipment": 1
+        }
+      }
+    },
+    "discharge-defense-remote": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1
+        },
+        "results": {
+          "discharge-defense-remote": 1
+        }
+      }
+    },
+    "productivity-module": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "productivity-module": 1
+        }
+      }
+    },
+    "arithmetic-combinator": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "copper-cable": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "arithmetic-combinator": 1
+        }
+      }
+    },
+    "artillery-wagon": {
+      "normal": {
+        "time": 4,
+        "ingredients": {
+          "engine-unit": 64,
+          "iron-gear-wheel": 10,
+          "steel-plate": 40,
+          "pipe": 16,
+          "advanced-circuit": 20
+        },
+        "results": {
+          "artillery-wagon": 1
+        }
+      }
+    },
+    "heat-pipe": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "steel-plate": 10,
+          "copper-plate": 20
+        },
+        "results": {
+          "heat-pipe": 1
+        }
+      }
+    },
+    "transport-belt": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 1,
+          "iron-gear-wheel": 1
+        },
+        "results": {
+          "transport-belt": 2
+        }
+      }
+    },
+    "filter-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "fast-inserter": 1,
+          "electronic-circuit": 4
+        },
+        "results": {
+          "filter-inserter": 1
+        }
+      }
+    },
+    "big-electric-pole": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-stick": 8,
+          "steel-plate": 5,
+          "copper-plate": 5
+        },
+        "results": {
+          "big-electric-pole": 1
+        }
+      }
+    },
+    "logistic-chest-buffer": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-chest": 1,
+          "electronic-circuit": 3,
+          "advanced-circuit": 1
+        },
+        "results": {
+          "logistic-chest-buffer": 1
+        }
+      }
+    },
+    "flamethrower-ammo": {
+      "normal": {
+        "time": 6,
+        "ingredients": {
+          "steel-plate": 5,
+          "crude-oil": 100
+        },
+        "results": {
+          "flamethrower-ammo": 1
+        }
+      }
+    },
+    "cargo-wagon": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "iron-plate": 20,
+          "steel-plate": 20
+        },
+        "results": {
+          "cargo-wagon": 1
+        }
+      }
+    },
+    "uranium-rounds-magazine": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "piercing-rounds-magazine": 1,
+          "uranium-238": 1
+        },
+        "results": {
+          "uranium-rounds-magazine": 1
+        }
+      }
+    },
+    "destroyer-capsule": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "distractor-capsule": 4,
+          "speed-module": 1
+        },
+        "results": {
+          "destroyer-capsule": 1
+        }
+      }
+    },
+    "small-lamp": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "copper-cable": 3,
+          "iron-plate": 1
+        },
+        "results": {
+          "small-lamp": 1
+        }
+      }
+    },
+    "pump": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "engine-unit": 1,
+          "steel-plate": 1,
+          "pipe": 1
+        },
+        "results": {
+          "pump": 1
+        }
+      }
+    },
+    "loader": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "inserter": 5,
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 5,
+          "iron-plate": 5,
+          "transport-belt": 5
+        },
+        "results": {
+          "loader": 1
+        }
+      }
+    },
+    "processing-unit": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "electronic-circuit": 20,
+          "advanced-circuit": 2,
+          "sulfuric-acid": 5
+        },
+        "results": {
+          "processing-unit": 1
+        }
+      },
+      "expensive": {
+        "time": 10,
+        "ingredients": {
+          "electronic-circuit": 20,
+          "advanced-circuit": 2,
+          "sulfuric-acid": 10
+        },
+        "results": {
+          "processing-unit": 1
+        }
+      }
+    },
+    "rocket-part": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "rocket-control-unit": 10,
+          "low-density-structure": 10,
+          "rocket-fuel": 10
+        },
+        "results": {
+          "rocket-part": 1
+        }
+      }
+    },
+    "poison-capsule": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 3,
+          "electronic-circuit": 3,
+          "coal": 10
+        },
+        "results": {
+          "poison-capsule": 1
+        }
+      }
+    },
+    "rocket-launcher": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "iron-plate": 5,
+          "iron-gear-wheel": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "rocket-launcher": 1
+        }
+      }
+    },
+    "basic-oil-processing": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "crude-oil": 100
+        },
+        "results": {
+          "petroleum-gas": 45
+        }
+      }
+    },
+    "light-oil-cracking": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "water": 30,
+          "light-oil": 30
+        },
+        "results": {
+          "petroleum-gas": 20
+        }
+      }
+    },
+    "car": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "engine-unit": 8,
+          "iron-plate": 20,
+          "steel-plate": 5
+        },
+        "results": {
+          "car": 1
+        }
+      }
+    },
+    "cluster-grenade": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "grenade": 7,
+          "explosives": 5,
+          "steel-plate": 5
+        },
+        "results": {
+          "cluster-grenade": 1
+        }
+      }
+    },
+    "boiler": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone-furnace": 1,
+          "pipe": 4
+        },
+        "results": {
+          "boiler": 1
+        }
+      }
+    },
+    "submachine-gun": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "copper-plate": 5,
+          "iron-plate": 10
+        },
+        "results": {
+          "submachine-gun": 1
+        }
+      },
+      "expensive": {
+        "time": 10,
+        "ingredients": {
+          "iron-gear-wheel": 15,
+          "copper-plate": 20,
+          "iron-plate": 30
+        },
+        "results": {
+          "submachine-gun": 1
+        }
+      }
+    },
+    "red-wire": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "copper-cable": 1
+        },
+        "results": {
+          "red-wire": 1
+        }
+      }
+    },
+    "assembling-machine-1": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 5,
+          "iron-plate": 9
+        },
+        "results": {
+          "assembling-machine-1": 1
+        }
+      }
+    },
+    "lab": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "electronic-circuit": 10,
+          "iron-gear-wheel": 10,
+          "transport-belt": 4
+        },
+        "results": {
+          "lab": 1
+        }
+      }
+    },
+    "railgun-dart": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "railgun-dart": 1
+        }
+      }
+    },
+    "solar-panel-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "solar-panel": 1,
+          "advanced-circuit": 2,
+          "steel-plate": 5
+        },
+        "results": {
+          "solar-panel-equipment": 1
+        }
+      }
+    },
+    "express-transport-belt": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "fast-transport-belt": 1,
+          "lubricant": 20
+        },
+        "results": {
+          "express-transport-belt": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 20,
+          "fast-transport-belt": 1,
+          "lubricant": 20
+        },
+        "results": {
+          "express-transport-belt": 1
+        }
+      }
+    },
+    "repair-pack": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 2,
+          "iron-gear-wheel": 2
+        },
+        "results": {
+          "repair-pack": 1
+        }
+      }
+    },
+    "artillery-turret": {
+      "normal": {
+        "time": 40,
+        "ingredients": {
+          "steel-plate": 60,
+          "concrete": 60,
+          "iron-gear-wheel": 40,
+          "advanced-circuit": 20
+        },
+        "results": {
+          "artillery-turret": 1
+        }
+      }
+    },
+    "combat-shotgun": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "steel-plate": 15,
+          "iron-gear-wheel": 5,
+          "copper-plate": 10,
+          "wood": 10
+        },
+        "results": {
+          "combat-shotgun": 1
+        }
+      }
+    },
+    "rail-chain-signal": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "iron-plate": 5
+        },
+        "results": {
+          "rail-chain-signal": 1
+        }
+      }
+    },
+    "iron-gear-wheel": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 2
+        },
+        "results": {
+          "iron-gear-wheel": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 4
+        },
+        "results": {
+          "iron-gear-wheel": 1
+        }
+      }
+    },
+    "grenade": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "iron-plate": 5,
+          "coal": 10
+        },
+        "results": {
+          "grenade": 1
+        }
+      }
+    },
+    "personal-laser-defense-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "processing-unit": 20,
+          "low-density-structure": 5,
+          "laser-turret": 5
+        },
+        "results": {
+          "personal-laser-defense-equipment": 1
+        }
+      }
+    },
+    "energy-shield-mk2-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "energy-shield-equipment": 10,
+          "processing-unit": 5,
+          "low-density-structure": 5
+        },
+        "results": {
+          "energy-shield-mk2-equipment": 1
+        }
+      }
+    },
+    "light-armor": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "iron-plate": 40
+        },
+        "results": {
+          "light-armor": 1
+        }
+      }
+    },
+    "rocket-silo": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "steel-plate": 1000,
+          "concrete": 1000,
+          "pipe": 100,
+          "processing-unit": 200,
+          "electric-engine-unit": 200
+        },
+        "results": {
+          "rocket-silo": 1
+        }
+      }
+    },
+    "pipe-to-ground": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "pipe": 10,
+          "iron-plate": 5
+        },
+        "results": {
+          "pipe-to-ground": 2
+        }
+      }
+    },
+    "logistic-chest-active-provider": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-chest": 1,
+          "electronic-circuit": 3,
+          "advanced-circuit": 1
+        },
+        "results": {
+          "logistic-chest-active-provider": 1
+        }
+      }
+    },
+    "heat-exchanger": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "steel-plate": 10,
+          "copper-plate": 100,
+          "pipe": 10
+        },
+        "results": {
+          "heat-exchanger": 1
+        }
+      }
+    },
+    "uranium-fuel-cell": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "iron-plate": 10,
+          "uranium-235": 1,
+          "uranium-238": 19
+        },
+        "results": {
+          "uranium-fuel-cell": 10
+        }
+      }
+    },
+    "substation": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-plate": 10,
+          "advanced-circuit": 5,
+          "copper-plate": 5
+        },
+        "results": {
+          "substation": 1
+        }
+      }
+    },
+    "uranium-processing": {
+      "normal": {
+        "time": 12,
+        "ingredients": {
+          "uranium-ore": 10
+        },
+        "results": {
+          "uranium-235": 1,
+          "uranium-238": 1
+        }
+      }
+    },
+    "nuclear-fuel": {
+      "normal": {
+        "time": 90,
+        "ingredients": {
+          "uranium-235": 1,
+          "rocket-fuel": 1
+        },
+        "results": {
+          "nuclear-fuel": 1
+        }
+      }
+    },
+    "plastic-bar": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "petroleum-gas": 20,
+          "coal": 1
+        },
+        "results": {
+          "plastic-bar": 2
+        }
+      }
+    },
+    "speed-module": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "speed-module": 1
+        }
+      }
+    },
+    "pipe": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 1
+        },
+        "results": {
+          "pipe": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 2
+        },
+        "results": {
+          "pipe": 1
+        }
+      }
+    },
+    "shotgun": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "iron-plate": 15,
+          "iron-gear-wheel": 5,
+          "copper-plate": 10,
+          "wood": 5
+        },
+        "results": {
+          "shotgun": 1
+        }
+      }
+    },
+    "low-density-structure": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "steel-plate": 2,
+          "copper-plate": 20,
+          "plastic-bar": 5
+        },
+        "results": {
+          "low-density-structure": 1
+        }
+      },
+      "expensive": {
+        "time": 20,
+        "ingredients": {
+          "steel-plate": 2,
+          "copper-plate": 20,
+          "plastic-bar": 30
+        },
+        "results": {
+          "low-density-structure": 1
+        }
+      }
+    },
+    "storage-tank": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "iron-plate": 20,
+          "steel-plate": 5
+        },
+        "results": {
+          "storage-tank": 1
+        }
+      }
+    },
+    "construction-robot": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "flying-robot-frame": 1,
+          "electronic-circuit": 2
+        },
+        "results": {
+          "construction-robot": 1
+        }
+      }
+    },
+    "nuclear-fuel-reprocessing": {
+      "normal": {
+        "time": 60,
+        "ingredients": {
+          "used-up-uranium-fuel-cell": 5
+        },
+        "results": {
+          "uranium-238": 3
+        }
+      }
+    },
+    "centrifuge": {
+      "normal": {
+        "time": 4,
+        "ingredients": {
+          "concrete": 100,
+          "steel-plate": 50,
+          "advanced-circuit": 100,
+          "iron-gear-wheel": 100
+        },
+        "results": {
+          "centrifuge": 1
+        }
+      }
+    },
+    "explosive-rocket": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "rocket": 1,
+          "explosives": 2
+        },
+        "results": {
+          "explosive-rocket": 1
+        }
+      }
+    },
+    "logistic-chest-storage": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-chest": 1,
+          "electronic-circuit": 3,
+          "advanced-circuit": 1
+        },
+        "results": {
+          "logistic-chest-storage": 1
+        }
+      }
+    },
+    "assembling-machine-2": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-plate": 2,
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 5,
+          "assembling-machine-1": 1
+        },
+        "results": {
+          "assembling-machine-2": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-plate": 5,
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 10,
+          "assembling-machine-1": 1
+        },
+        "results": {
+          "assembling-machine-2": 1
+        }
+      }
+    },
+    "heavy-armor": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "copper-plate": 100,
+          "steel-plate": 50
+        },
+        "results": {
+          "heavy-armor": 1
+        }
+      }
+    },
+    "landfill": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone": 20
+        },
+        "results": {
+          "landfill": 1
+        }
+      }
+    },
+    "stack-filter-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stack-inserter": 1,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "stack-filter-inserter": 1
+        }
+      }
+    },
+    "coal-liquefaction": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "coal": 10,
+          "heavy-oil": 25,
+          "steam": 50
+        },
+        "results": {
+          "heavy-oil": 90,
+          "light-oil": 20,
+          "petroleum-gas": 10
+        }
+      }
+    },
+    "effectivity-module": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "effectivity-module": 1
+        }
+      }
+    },
+    "energy-shield-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "steel-plate": 10
+        },
+        "results": {
+          "energy-shield-equipment": 1
+        }
+      }
+    },
+    "piercing-shotgun-shell": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "shotgun-shell": 2,
+          "copper-plate": 5,
+          "steel-plate": 2
+        },
+        "results": {
+          "piercing-shotgun-shell": 1
+        }
+      }
+    },
+    "splitter": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "electronic-circuit": 5,
+          "iron-plate": 5,
+          "transport-belt": 4
+        },
+        "results": {
+          "splitter": 1
+        }
+      }
+    },
+    "lubricant": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "heavy-oil": 10
+        },
+        "results": {
+          "lubricant": 10
+        }
+      }
+    },
+    "refined-concrete": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "concrete": 20,
+          "iron-stick": 8,
+          "steel-plate": 1,
+          "water": 100
+        },
+        "results": {
+          "refined-concrete": 10
+        }
+      }
+    },
+    "power-switch": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "iron-plate": 5,
+          "copper-cable": 5,
+          "electronic-circuit": 2
+        },
+        "results": {
+          "power-switch": 1
+        }
+      }
+    },
+    "satellite": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "low-density-structure": 100,
+          "solar-panel": 100,
+          "accumulator": 100,
+          "radar": 5,
+          "processing-unit": 100,
+          "rocket-fuel": 50
+        },
+        "results": {
+          "satellite": 1
+        }
+      }
+    },
+    "rail": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone": 1,
+          "iron-stick": 1,
+          "steel-plate": 1
+        },
+        "results": {
+          "rail": 2
+        }
+      }
+    },
+    "inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "iron-gear-wheel": 1,
+          "iron-plate": 1
+        },
+        "results": {
+          "inserter": 1
+        }
+      }
+    },
+    "pistol": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "copper-plate": 5,
+          "iron-plate": 5
+        },
+        "results": {
+          "pistol": 1
+        }
+      }
+    },
+    "programmable-speaker": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "iron-plate": 3,
+          "iron-stick": 4,
+          "copper-cable": 5,
+          "electronic-circuit": 4
+        },
+        "results": {
+          "programmable-speaker": 1
+        }
+      }
+    },
+    "hazard-concrete": {
+      "normal": {
+        "time": 0.25,
+        "ingredients": {
+          "concrete": 10
+        },
+        "results": {
+          "hazard-concrete": 10
+        }
+      }
+    },
+    "decider-combinator": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "copper-cable": 5,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "decider-combinator": 1
+        }
+      }
+    },
+    "steel-chest": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-plate": 8
+        },
+        "results": {
+          "steel-chest": 1
+        }
+      }
+    },
+    "fusion-reactor-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "processing-unit": 200,
+          "low-density-structure": 50
+        },
+        "results": {
+          "fusion-reactor-equipment": 1
+        }
+      }
+    },
+    "cliff-explosives": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "explosives": 10,
+          "grenade": 1,
+          "empty-barrel": 1
+        },
+        "results": {
+          "cliff-explosives": 1
+        }
+      }
+    },
+    "defender-capsule": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "piercing-rounds-magazine": 3,
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 3
+        },
+        "results": {
+          "defender-capsule": 1
+        }
+      }
+    },
+    "green-wire": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "copper-cable": 1
+        },
+        "results": {
+          "green-wire": 1
+        }
+      }
+    },
+    "stack-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 15,
+          "electronic-circuit": 15,
+          "advanced-circuit": 1,
+          "fast-inserter": 1
+        },
+        "results": {
+          "stack-inserter": 1
+        }
+      }
+    },
+    "express-underground-belt": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "iron-gear-wheel": 80,
+          "fast-underground-belt": 2,
+          "lubricant": 40
+        },
+        "results": {
+          "express-underground-belt": 2
+        }
+      }
+    },
+    "stone-brick": {
+      "normal": {
+        "time": 3.2,
+        "ingredients": {
+          "stone": 2
+        },
+        "results": {
+          "stone-brick": 1
+        }
+      }
+    },
+    "wooden-chest": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "wood": 2
+        },
+        "results": {
+          "wooden-chest": 1
+        }
+      }
+    },
+    "rail-signal": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "iron-plate": 5
+        },
+        "results": {
+          "rail-signal": 1
+        }
+      }
+    },
+    "rocket": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "electronic-circuit": 1,
+          "explosives": 1,
+          "iron-plate": 2
+        },
+        "results": {
+          "rocket": 1
+        }
+      }
+    },
+    "battery": {
+      "normal": {
+        "time": 4,
+        "ingredients": {
+          "sulfuric-acid": 20,
+          "iron-plate": 1,
+          "copper-plate": 1
+        },
+        "results": {
+          "battery": 1
+        }
+      },
+      "expensive": {
+        "time": 5,
+        "ingredients": {
+          "sulfuric-acid": 40,
+          "iron-plate": 1,
+          "copper-plate": 1
+        },
+        "results": {
+          "battery": 1
+        }
+      }
+    },
+    "night-vision-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "steel-plate": 10
+        },
+        "results": {
+          "night-vision-equipment": 1
+        }
+      }
+    },
+    "accumulator": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "iron-plate": 2,
+          "battery": 5
+        },
+        "results": {
+          "accumulator": 1
+        }
+      }
+    },
+    "distractor-capsule": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "defender-capsule": 4,
+          "advanced-circuit": 3
+        },
+        "results": {
+          "distractor-capsule": 1
+        }
+      }
+    },
+    "heavy-oil-cracking": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "water": 30,
+          "heavy-oil": 40
+        },
+        "results": {
+          "light-oil": 30
+        }
+      }
+    },
+    "automation-science-pack": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "copper-plate": 1,
+          "iron-gear-wheel": 1
+        },
+        "results": {
+          "automation-science-pack": 1
+        }
+      }
+    },
+    "battery-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "battery": 5,
+          "steel-plate": 10
+        },
+        "results": {
+          "battery-equipment": 1
+        }
+      }
+    },
+    "chemical-plant": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "steel-plate": 5,
+          "iron-gear-wheel": 5,
+          "electronic-circuit": 5,
+          "pipe": 5
+        },
+        "results": {
+          "chemical-plant": 1
+        }
+      }
+    },
+    "explosives": {
+      "normal": {
+        "time": 4,
+        "ingredients": {
+          "sulfur": 1,
+          "coal": 1,
+          "water": 10
+        },
+        "results": {
+          "explosives": 2
+        }
+      },
+      "expensive": {
+        "time": 5,
+        "ingredients": {
+          "sulfur": 2,
+          "coal": 2,
+          "water": 10
+        },
+        "results": {
+          "explosives": 2
+        }
+      }
+    },
+    "long-handed-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 1,
+          "iron-plate": 1,
+          "inserter": 1
+        },
+        "results": {
+          "long-handed-inserter": 1
+        }
+      }
+    },
+    "iron-plate": {
+      "normal": {
+        "time": 3.2,
+        "ingredients": {
+          "iron-ore": 1
+        },
+        "results": {
+          "iron-plate": 1
+        }
+      }
+    },
+    "oil-refinery": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 15,
+          "iron-gear-wheel": 10,
+          "stone-brick": 10,
+          "electronic-circuit": 10,
+          "pipe": 10
+        },
+        "results": {
+          "oil-refinery": 1
+        }
+      }
+    },
+    "productivity-module-2": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "productivity-module": 4,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "productivity-module-2": 1
+        }
+      }
+    },
+    "sulfuric-acid": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "sulfur": 5,
+          "iron-plate": 1,
+          "water": 100
+        },
+        "results": {
+          "sulfuric-acid": 50
+        }
+      }
+    },
+    "electric-engine-unit": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "engine-unit": 1,
+          "lubricant": 15,
+          "electronic-circuit": 2
+        },
+        "results": {
+          "electric-engine-unit": 1
+        }
+      }
+    },
+    "beacon": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "electronic-circuit": 20,
+          "advanced-circuit": 20,
+          "steel-plate": 10,
+          "copper-cable": 10
+        },
+        "results": {
+          "beacon": 1
+        }
+      }
+    },
+    "electric-furnace": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "steel-plate": 10,
+          "advanced-circuit": 5,
+          "stone-brick": 10
+        },
+        "results": {
+          "electric-furnace": 1
+        }
+      }
+    },
+    "roboport": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "steel-plate": 45,
+          "iron-gear-wheel": 45,
+          "advanced-circuit": 45
+        },
+        "results": {
+          "roboport": 1
+        }
+      }
+    },
+    "artillery-shell": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "explosive-cannon-shell": 4,
+          "radar": 1,
+          "explosives": 8
+        },
+        "results": {
+          "artillery-shell": 1
+        }
+      }
+    },
+    "logistic-chest-requester": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-chest": 1,
+          "electronic-circuit": 3,
+          "advanced-circuit": 1
+        },
+        "results": {
+          "logistic-chest-requester": 1
+        }
+      }
+    },
+    "speed-module-3": {
+      "normal": {
+        "time": 60,
+        "ingredients": {
+          "speed-module-2": 5,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "speed-module-3": 1
+        }
+      }
+    },
+    "fast-transport-belt": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 5,
+          "transport-belt": 1
+        },
+        "results": {
+          "fast-transport-belt": 1
+        }
+      }
+    },
+    "nuclear-reactor": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "concrete": 500,
+          "steel-plate": 500,
+          "advanced-circuit": 500,
+          "copper-plate": 500
+        },
+        "results": {
+          "nuclear-reactor": 1
+        }
+      }
+    },
+    "flamethrower-turret": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "steel-plate": 30,
+          "iron-gear-wheel": 15,
+          "pipe": 10,
+          "engine-unit": 5
+        },
+        "results": {
+          "flamethrower-turret": 1
+        }
+      }
+    },
+    "fluid-wagon": {
+      "normal": {
+        "time": 1.5,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "steel-plate": 16,
+          "pipe": 8,
+          "storage-tank": 1
+        },
+        "results": {
+          "fluid-wagon": 1
+        }
+      }
+    },
+    "logistic-robot": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "flying-robot-frame": 1,
+          "advanced-circuit": 2
+        },
+        "results": {
+          "logistic-robot": 1
+        }
+      }
+    },
+    "advanced-circuit": {
+      "normal": {
+        "time": 6,
+        "ingredients": {
+          "electronic-circuit": 2,
+          "plastic-bar": 2,
+          "copper-cable": 4
+        },
+        "results": {
+          "advanced-circuit": 1
+        }
+      },
+      "expensive": {
+        "time": 6,
+        "ingredients": {
+          "electronic-circuit": 2,
+          "plastic-bar": 4,
+          "copper-cable": 8
+        },
+        "results": {
+          "advanced-circuit": 1
+        }
+      }
+    },
+    "sulfur": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "water": 30,
+          "petroleum-gas": 30
+        },
+        "results": {
+          "sulfur": 2
+        }
+      }
+    },
+    "power-armor-mk2": {
+      "normal": {
+        "time": 25,
+        "ingredients": {
+          "effectivity-module-2": 25,
+          "speed-module-2": 25,
+          "processing-unit": 60,
+          "electric-engine-unit": 40,
+          "low-density-structure": 30
+        },
+        "results": {
+          "power-armor-mk2": 1
+        }
+      }
+    },
+    "express-splitter": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "fast-splitter": 1,
+          "iron-gear-wheel": 10,
+          "advanced-circuit": 10,
+          "lubricant": 80
+        },
+        "results": {
+          "express-splitter": 1
+        }
+      }
+    },
+    "chemical-science-pack": {
+      "normal": {
+        "time": 24,
+        "ingredients": {
+          "engine-unit": 2,
+          "advanced-circuit": 3,
+          "sulfur": 1
+        },
+        "results": {
+          "chemical-science-pack": 2
+        }
+      }
+    },
+    "express-loader": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "express-transport-belt": 5,
+          "fast-loader": 1
+        },
+        "results": {
+          "express-loader": 1
+        }
+      }
+    },
+    "effectivity-module-3": {
+      "normal": {
+        "time": 60,
+        "ingredients": {
+          "effectivity-module-2": 5,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "effectivity-module-3": 1
+        }
+      }
+    },
+    "small-plane": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "plastic-bar": 100,
+          "advanced-circuit": 200,
+          "electric-engine-unit": 20,
+          "battery": 100
+        },
+        "results": {
+          "small-plane": 1
+        }
+      }
+    },
+    "fast-underground-belt": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "iron-gear-wheel": 40,
+          "underground-belt": 2
+        },
+        "results": {
+          "fast-underground-belt": 2
+        }
+      }
+    },
+    "train-stop": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 5,
+          "iron-plate": 6,
+          "iron-stick": 6,
+          "steel-plate": 3
+        },
+        "results": {
+          "train-stop": 1
+        }
+      }
+    },
+    "belt-immunity-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "advanced-circuit": 5,
+          "steel-plate": 10
+        },
+        "results": {
+          "belt-immunity-equipment": 1
+        }
+      }
+    },
+    "production-science-pack": {
+      "normal": {
+        "time": 21,
+        "ingredients": {
+          "electric-furnace": 1,
+          "productivity-module": 1,
+          "rail": 30
+        },
+        "results": {
+          "production-science-pack": 3
+        }
+      }
+    },
+    "locomotive": {
+      "normal": {
+        "time": 4,
+        "ingredients": {
+          "engine-unit": 20,
+          "electronic-circuit": 10,
+          "steel-plate": 30
+        },
+        "results": {
+          "locomotive": 1
+        }
+      }
+    },
+    "military-science-pack": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "piercing-rounds-magazine": 1,
+          "grenade": 1,
+          "stone-wall": 2
+        },
+        "results": {
+          "military-science-pack": 2
+        }
+      }
+    },
+    "gun-turret": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "copper-plate": 10,
+          "iron-plate": 20
+        },
+        "results": {
+          "gun-turret": 1
+        }
+      }
+    },
+    "fast-splitter": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "splitter": 1,
+          "iron-gear-wheel": 10,
+          "electronic-circuit": 10
+        },
+        "results": {
+          "fast-splitter": 1
+        }
+      }
+    },
+    "underground-belt": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "iron-plate": 10,
+          "transport-belt": 5
+        },
+        "results": {
+          "underground-belt": 2
+        }
+      }
+    },
+    "railgun": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 15,
+          "copper-plate": 15,
+          "electronic-circuit": 10,
+          "advanced-circuit": 5
+        },
+        "results": {
+          "railgun": 1
+        }
+      }
+    },
+    "electronic-circuit": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 1,
+          "copper-cable": 3
+        },
+        "results": {
+          "electronic-circuit": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 2,
+          "copper-cable": 8
+        },
+        "results": {
+          "electronic-circuit": 1
+        }
+      }
+    },
+    "explosive-uranium-cannon-shell": {
+      "normal": {
+        "time": 12,
+        "ingredients": {
+          "explosive-cannon-shell": 1,
+          "uranium-238": 1
+        },
+        "results": {
+          "explosive-uranium-cannon-shell": 1
+        }
+      }
+    },
+    "logistic-chest-passive-provider": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "steel-chest": 1,
+          "electronic-circuit": 3,
+          "advanced-circuit": 1
+        },
+        "results": {
+          "logistic-chest-passive-provider": 1
+        }
+      }
+    },
+    "land-mine": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "steel-plate": 1,
+          "explosives": 2
+        },
+        "results": {
+          "land-mine": 4
+        }
+      }
+    },
+    "gate": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone-wall": 1,
+          "steel-plate": 2,
+          "electronic-circuit": 2
+        },
+        "results": {
+          "gate": 1
+        }
+      }
+    },
+    "flamethrower": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "steel-plate": 5,
+          "iron-gear-wheel": 10
+        },
+        "results": {
+          "flamethrower": 1
+        }
+      }
+    },
+    "modular-armor": {
+      "normal": {
+        "time": 15,
+        "ingredients": {
+          "advanced-circuit": 30,
+          "steel-plate": 50
+        },
+        "results": {
+          "modular-armor": 1
+        }
+      }
+    },
+    "explosive-cannon-shell": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 2,
+          "plastic-bar": 2,
+          "explosives": 2
+        },
+        "results": {
+          "explosive-cannon-shell": 1
+        }
+      },
+      "expensive": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 4,
+          "plastic-bar": 4,
+          "explosives": 2
+        },
+        "results": {
+          "explosive-cannon-shell": 1
+        }
+      }
+    },
+    "uranium-cannon-shell": {
+      "normal": {
+        "time": 12,
+        "ingredients": {
+          "cannon-shell": 1,
+          "uranium-238": 1
+        },
+        "results": {
+          "uranium-cannon-shell": 1
+        }
+      }
+    },
+    "small-electric-pole": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "wood": 1,
+          "copper-cable": 2
+        },
+        "results": {
+          "small-electric-pole": 2
+        }
+      }
+    },
+    "burner-mining-drill": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "iron-gear-wheel": 3,
+          "stone-furnace": 1,
+          "iron-plate": 3
+        },
+        "results": {
+          "burner-mining-drill": 1
+        }
+      },
+      "expensive": {
+        "time": 4,
+        "ingredients": {
+          "iron-gear-wheel": 6,
+          "stone-furnace": 2,
+          "iron-plate": 6
+        },
+        "results": {
+          "burner-mining-drill": 1
+        }
+      }
+    },
+    "artillery-targeting-remote": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "processing-unit": 1,
+          "radar": 1
+        },
+        "results": {
+          "artillery-targeting-remote": 1
+        }
+      }
+    },
+    "iron-chest": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 8
+        },
+        "results": {
+          "iron-chest": 1
+        }
+      }
+    },
+    "offshore-pump": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 2,
+          "pipe": 1,
+          "iron-gear-wheel": 1
+        },
+        "results": {
+          "offshore-pump": 1
+        }
+      }
+    },
+    "electric-energy-interface": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 2,
+          "electronic-circuit": 5
+        },
+        "results": {
+          "electric-energy-interface": 1
+        }
+      }
+    },
+    "personal-roboport-mk2-equipment": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "personal-roboport-equipment": 5,
+          "processing-unit": 100,
+          "low-density-structure": 20
+        },
+        "results": {
+          "personal-roboport-mk2-equipment": 1
+        }
+      }
+    },
+    "radar": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 5,
+          "iron-plate": 10
+        },
+        "results": {
+          "radar": 1
+        }
+      }
+    },
+    "piercing-rounds-magazine": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "firearm-magazine": 1,
+          "steel-plate": 1,
+          "copper-plate": 5
+        },
+        "results": {
+          "piercing-rounds-magazine": 1
+        }
+      }
+    },
+    "utility-science-pack": {
+      "normal": {
+        "time": 21,
+        "ingredients": {
+          "low-density-structure": 3,
+          "processing-unit": 2,
+          "flying-robot-frame": 1
+        },
+        "results": {
+          "utility-science-pack": 3
+        }
+      }
+    },
+    "fast-loader": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "fast-transport-belt": 5,
+          "loader": 1
+        },
+        "results": {
+          "fast-loader": 1
+        }
+      }
+    },
+    "speed-module-2": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "speed-module": 4,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "speed-module-2": 1
+        }
+      }
+    },
+    "stone-furnace": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "stone": 5
+        },
+        "results": {
+          "stone-furnace": 1
+        }
+      }
+    },
+    "kovarex-enrichment-process": {
+      "normal": {
+        "time": 60,
+        "ingredients": {
+          "uranium-235": 40,
+          "uranium-238": 5
+        },
+        "results": {
+          "uranium-235": 41,
+          "uranium-238": 2
+        }
+      }
+    },
+    "medium-electric-pole": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-stick": 4,
+          "steel-plate": 2,
+          "copper-plate": 2
+        },
+        "results": {
+          "medium-electric-pole": 1
+        }
+      }
+    },
+    "electric-mining-drill": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "electronic-circuit": 3,
+          "iron-gear-wheel": 5,
+          "iron-plate": 10
+        },
+        "results": {
+          "electric-mining-drill": 1
+        }
+      },
+      "expensive": {
+        "time": 2,
+        "ingredients": {
+          "electronic-circuit": 5,
+          "iron-gear-wheel": 10,
+          "iron-plate": 20
+        },
+        "results": {
+          "electric-mining-drill": 1
+        }
+      }
+    },
+    "atomic-bomb": {
+      "normal": {
+        "time": 50,
+        "ingredients": {
+          "rocket-control-unit": 10,
+          "explosives": 10,
+          "uranium-235": 30
+        },
+        "results": {
+          "atomic-bomb": 1
+        }
+      }
+    },
+    "rocket-control-unit": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "processing-unit": 1,
+          "speed-module": 1
+        },
+        "results": {
+          "rocket-control-unit": 1
+        }
+      }
+    },
+    "engine-unit": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "steel-plate": 1,
+          "iron-gear-wheel": 1,
+          "pipe": 2
+        },
+        "results": {
+          "engine-unit": 1
+        }
+      }
+    },
+    "player-port": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 10,
+          "iron-gear-wheel": 5,
+          "iron-plate": 1
+        },
+        "results": {
+          "player-port": 1
+        }
+      }
+    },
+    "firearm-magazine": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "iron-plate": 4
+        },
+        "results": {
+          "firearm-magazine": 1
+        }
+      }
+    },
+    "tank": {
+      "normal": {
+        "time": 5,
+        "ingredients": {
+          "engine-unit": 32,
+          "steel-plate": 50,
+          "iron-gear-wheel": 15,
+          "advanced-circuit": 10
+        },
+        "results": {
+          "tank": 1
+        }
+      },
+      "expensive": {
+        "time": 8,
+        "ingredients": {
+          "engine-unit": 64,
+          "steel-plate": 100,
+          "iron-gear-wheel": 30,
+          "advanced-circuit": 20
+        },
+        "results": {
+          "tank": 1
+        }
+      }
+    },
+    "steel-furnace": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "steel-plate": 6,
+          "stone-brick": 10
+        },
+        "results": {
+          "steel-furnace": 1
+        }
+      }
+    },
+    "refined-hazard-concrete": {
+      "normal": {
+        "time": 0.25,
+        "ingredients": {
+          "refined-concrete": 10
+        },
+        "results": {
+          "refined-hazard-concrete": 10
+        }
+      }
+    },
+    "flying-robot-frame": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "electric-engine-unit": 1,
+          "battery": 2,
+          "steel-plate": 1,
+          "electronic-circuit": 3
+        },
+        "results": {
+          "flying-robot-frame": 1
+        }
+      }
+    },
+    "cannon-shell": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 2,
+          "plastic-bar": 2,
+          "explosives": 1
+        },
+        "results": {
+          "cannon-shell": 1
+        }
+      },
+      "expensive": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 4,
+          "plastic-bar": 4,
+          "explosives": 1
+        },
+        "results": {
+          "cannon-shell": 1
+        }
+      }
+    },
+    "shotgun-shell": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "copper-plate": 2,
+          "iron-plate": 2
+        },
+        "results": {
+          "shotgun-shell": 1
+        }
+      }
+    },
+    "solid-fuel-from-petroleum-gas": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "petroleum-gas": 20
+        },
+        "results": {
+          "solid-fuel": 1
+        }
+      }
+    },
+    "empty-barrel": {
+      "normal": {
+        "time": 1,
+        "ingredients": {
+          "steel-plate": 1
+        },
+        "results": {
+          "empty-barrel": 1
+        }
+      }
+    },
+    "fast-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "electronic-circuit": 2,
+          "iron-plate": 2,
+          "inserter": 1
+        },
+        "results": {
+          "fast-inserter": 1
+        }
+      }
+    },
+    "effectivity-module-2": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "effectivity-module": 4,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "effectivity-module-2": 1
+        }
+      }
+    },
+    "burner-inserter": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-plate": 1,
+          "iron-gear-wheel": 1
+        },
+        "results": {
+          "burner-inserter": 1
+        }
+      }
+    },
+    "productivity-module-3": {
+      "normal": {
+        "time": 60,
+        "ingredients": {
+          "productivity-module-2": 5,
+          "advanced-circuit": 5,
+          "processing-unit": 5
+        },
+        "results": {
+          "productivity-module-3": 1
+        }
+      }
+    },
+    "slowdown-capsule": {
+      "normal": {
+        "time": 8,
+        "ingredients": {
+          "steel-plate": 2,
+          "electronic-circuit": 2,
+          "coal": 5
+        },
+        "results": {
+          "slowdown-capsule": 1
+        }
+      }
+    },
+    "rocket-fuel": {
+      "normal": {
+        "time": 30,
+        "ingredients": {
+          "solid-fuel": 10,
+          "light-oil": 10
+        },
+        "results": {
+          "rocket-fuel": 1
+        }
+      }
+    },
+    "steam-engine": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 8,
+          "pipe": 5,
+          "iron-plate": 10
+        },
+        "results": {
+          "steam-engine": 1
+        }
+      },
+      "expensive": {
+        "time": 0.5,
+        "ingredients": {
+          "iron-gear-wheel": 10,
+          "pipe": 5,
+          "iron-plate": 50
+        },
+        "results": {
+          "steam-engine": 1
+        }
+      }
+    },
+    "solid-fuel-from-light-oil": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "light-oil": 10
+        },
+        "results": {
+          "solid-fuel": 1
+        }
+      }
+    },
+    "solar-panel": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "steel-plate": 5,
+          "electronic-circuit": 15,
+          "copper-plate": 5
+        },
+        "results": {
+          "solar-panel": 1
+        }
+      }
+    },
+    "steam-turbine": {
+      "normal": {
+        "time": 3,
+        "ingredients": {
+          "iron-gear-wheel": 50,
+          "copper-plate": 50,
+          "pipe": 20
+        },
+        "results": {
+          "steam-turbine": 1
+        }
+      }
+    },
+    "logistic-science-pack": {
+      "normal": {
+        "time": 6,
+        "ingredients": {
+          "inserter": 1,
+          "transport-belt": 1
+        },
+        "results": {
+          "logistic-science-pack": 1
+        }
+      }
+    },
+    "exoskeleton-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "processing-unit": 10,
+          "electric-engine-unit": 30,
+          "steel-plate": 20
+        },
+        "results": {
+          "exoskeleton-equipment": 1
+        }
+      }
+    },
+    "discharge-defense-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "processing-unit": 5,
+          "steel-plate": 20,
+          "laser-turret": 10
+        },
+        "results": {
+          "discharge-defense-equipment": 1
+        }
+      }
+    },
+    "laser-turret": {
+      "normal": {
+        "time": 20,
+        "ingredients": {
+          "steel-plate": 20,
+          "electronic-circuit": 20,
+          "battery": 12
+        },
+        "results": {
+          "laser-turret": 1
+        }
+      }
+    },
+    "copper-cable": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "copper-plate": 1
+        },
+        "results": {
+          "copper-cable": 2
+        }
+      }
+    },
+    "battery-mk2-equipment": {
+      "normal": {
+        "time": 10,
+        "ingredients": {
+          "battery-equipment": 10,
+          "processing-unit": 15,
+          "low-density-structure": 5
+        },
+        "results": {
+          "battery-mk2-equipment": 1
+        }
+      }
+    },
+    "solid-fuel-from-heavy-oil": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "heavy-oil": 20
+        },
+        "results": {
+          "solid-fuel": 1
+        }
+      }
+    },
+    "assembling-machine-3": {
+      "normal": {
+        "time": 0.5,
+        "ingredients": {
+          "speed-module": 4,
+          "assembling-machine-2": 2
+        },
+        "results": {
+          "assembling-machine-3": 1
+        }
+      }
+    }
+  },
+  "items": {
+    "constant-combinator": [
+      "constant-combinator"
+    ],
+    "heavy-oil": [
+      "advanced-oil-processing",
+      "coal-liquefaction"
+    ],
+    "light-oil": [
+      "advanced-oil-processing",
+      "coal-liquefaction",
+      "heavy-oil-cracking"
+    ],
+    "petroleum-gas": [
+      "advanced-oil-processing",
+      "basic-oil-processing",
+      "light-oil-cracking",
+      "coal-liquefaction"
+    ],
+    "concrete": [
+      "concrete"
+    ],
+    "stone-wall": [
+      "stone-wall"
+    ],
+    "power-armor": [
+      "power-armor"
+    ],
+    "iron-stick": [
+      "iron-stick"
+    ],
+    "pumpjack": [
+      "pumpjack"
+    ],
+    "steel-plate": [
+      "steel-plate"
+    ],
+    "copper-plate": [
+      "copper-plate"
+    ],
+    "personal-roboport-equipment": [
+      "personal-roboport-equipment"
+    ],
+    "discharge-defense-remote": [
+      "discharge-defense-remote"
+    ],
+    "productivity-module": [
+      "productivity-module"
+    ],
+    "arithmetic-combinator": [
+      "arithmetic-combinator"
+    ],
+    "artillery-wagon": [
+      "artillery-wagon"
+    ],
+    "heat-pipe": [
+      "heat-pipe"
+    ],
+    "transport-belt": [
+      "transport-belt"
+    ],
+    "filter-inserter": [
+      "filter-inserter"
+    ],
+    "big-electric-pole": [
+      "big-electric-pole"
+    ],
+    "logistic-chest-buffer": [
+      "logistic-chest-buffer"
+    ],
+    "flamethrower-ammo": [
+      "flamethrower-ammo"
+    ],
+    "cargo-wagon": [
+      "cargo-wagon"
+    ],
+    "uranium-rounds-magazine": [
+      "uranium-rounds-magazine"
+    ],
+    "destroyer-capsule": [
+      "destroyer-capsule"
+    ],
+    "small-lamp": [
+      "small-lamp"
+    ],
+    "pump": [
+      "pump"
+    ],
+    "loader": [
+      "loader"
+    ],
+    "processing-unit": [
+      "processing-unit"
+    ],
+    "rocket-part": [
+      "rocket-part"
+    ],
+    "poison-capsule": [
+      "poison-capsule"
+    ],
+    "rocket-launcher": [
+      "rocket-launcher"
+    ],
+    "car": [
+      "car"
+    ],
+    "cluster-grenade": [
+      "cluster-grenade"
+    ],
+    "boiler": [
+      "boiler"
+    ],
+    "submachine-gun": [
+      "submachine-gun"
+    ],
+    "red-wire": [
+      "red-wire"
+    ],
+    "assembling-machine-1": [
+      "assembling-machine-1"
+    ],
+    "lab": [
+      "lab"
+    ],
+    "railgun-dart": [
+      "railgun-dart"
+    ],
+    "solar-panel-equipment": [
+      "solar-panel-equipment"
+    ],
+    "express-transport-belt": [
+      "express-transport-belt"
+    ],
+    "repair-pack": [
+      "repair-pack"
+    ],
+    "artillery-turret": [
+      "artillery-turret"
+    ],
+    "combat-shotgun": [
+      "combat-shotgun"
+    ],
+    "rail-chain-signal": [
+      "rail-chain-signal"
+    ],
+    "iron-gear-wheel": [
+      "iron-gear-wheel"
+    ],
+    "grenade": [
+      "grenade"
+    ],
+    "personal-laser-defense-equipment": [
+      "personal-laser-defense-equipment"
+    ],
+    "energy-shield-mk2-equipment": [
+      "energy-shield-mk2-equipment"
+    ],
+    "light-armor": [
+      "light-armor"
+    ],
+    "rocket-silo": [
+      "rocket-silo"
+    ],
+    "pipe-to-ground": [
+      "pipe-to-ground"
+    ],
+    "logistic-chest-active-provider": [
+      "logistic-chest-active-provider"
+    ],
+    "heat-exchanger": [
+      "heat-exchanger"
+    ],
+    "uranium-fuel-cell": [
+      "uranium-fuel-cell"
+    ],
+    "substation": [
+      "substation"
+    ],
+    "uranium-235": [
+      "uranium-processing",
+      "kovarex-enrichment-process"
+    ],
+    "uranium-238": [
+      "uranium-processing",
+      "nuclear-fuel-reprocessing",
+      "kovarex-enrichment-process"
+    ],
+    "nuclear-fuel": [
+      "nuclear-fuel"
+    ],
+    "plastic-bar": [
+      "plastic-bar"
+    ],
+    "speed-module": [
+      "speed-module"
+    ],
+    "pipe": [
+      "pipe"
+    ],
+    "shotgun": [
+      "shotgun"
+    ],
+    "low-density-structure": [
+      "low-density-structure"
+    ],
+    "storage-tank": [
+      "storage-tank"
+    ],
+    "construction-robot": [
+      "construction-robot"
+    ],
+    "centrifuge": [
+      "centrifuge"
+    ],
+    "explosive-rocket": [
+      "explosive-rocket"
+    ],
+    "logistic-chest-storage": [
+      "logistic-chest-storage"
+    ],
+    "assembling-machine-2": [
+      "assembling-machine-2"
+    ],
+    "heavy-armor": [
+      "heavy-armor"
+    ],
+    "landfill": [
+      "landfill"
+    ],
+    "stack-filter-inserter": [
+      "stack-filter-inserter"
+    ],
+    "effectivity-module": [
+      "effectivity-module"
+    ],
+    "energy-shield-equipment": [
+      "energy-shield-equipment"
+    ],
+    "piercing-shotgun-shell": [
+      "piercing-shotgun-shell"
+    ],
+    "splitter": [
+      "splitter"
+    ],
+    "lubricant": [
+      "lubricant"
+    ],
+    "refined-concrete": [
+      "refined-concrete"
+    ],
+    "power-switch": [
+      "power-switch"
+    ],
+    "satellite": [
+      "satellite"
+    ],
+    "rail": [
+      "rail"
+    ],
+    "inserter": [
+      "inserter"
+    ],
+    "pistol": [
+      "pistol"
+    ],
+    "programmable-speaker": [
+      "programmable-speaker"
+    ],
+    "hazard-concrete": [
+      "hazard-concrete"
+    ],
+    "decider-combinator": [
+      "decider-combinator"
+    ],
+    "steel-chest": [
+      "steel-chest"
+    ],
+    "fusion-reactor-equipment": [
+      "fusion-reactor-equipment"
+    ],
+    "cliff-explosives": [
+      "cliff-explosives"
+    ],
+    "defender-capsule": [
+      "defender-capsule"
+    ],
+    "green-wire": [
+      "green-wire"
+    ],
+    "stack-inserter": [
+      "stack-inserter"
+    ],
+    "express-underground-belt": [
+      "express-underground-belt"
+    ],
+    "stone-brick": [
+      "stone-brick"
+    ],
+    "wooden-chest": [
+      "wooden-chest"
+    ],
+    "rail-signal": [
+      "rail-signal"
+    ],
+    "rocket": [
+      "rocket"
+    ],
+    "battery": [
+      "battery"
+    ],
+    "night-vision-equipment": [
+      "night-vision-equipment"
+    ],
+    "accumulator": [
+      "accumulator"
+    ],
+    "distractor-capsule": [
+      "distractor-capsule"
+    ],
+    "automation-science-pack": [
+      "automation-science-pack"
+    ],
+    "battery-equipment": [
+      "battery-equipment"
+    ],
+    "chemical-plant": [
+      "chemical-plant"
+    ],
+    "explosives": [
+      "explosives"
+    ],
+    "long-handed-inserter": [
+      "long-handed-inserter"
+    ],
+    "iron-plate": [
+      "iron-plate"
+    ],
+    "oil-refinery": [
+      "oil-refinery"
+    ],
+    "productivity-module-2": [
+      "productivity-module-2"
+    ],
+    "sulfuric-acid": [
+      "sulfuric-acid"
+    ],
+    "electric-engine-unit": [
+      "electric-engine-unit"
+    ],
+    "beacon": [
+      "beacon"
+    ],
+    "electric-furnace": [
+      "electric-furnace"
+    ],
+    "roboport": [
+      "roboport"
+    ],
+    "artillery-shell": [
+      "artillery-shell"
+    ],
+    "logistic-chest-requester": [
+      "logistic-chest-requester"
+    ],
+    "speed-module-3": [
+      "speed-module-3"
+    ],
+    "fast-transport-belt": [
+      "fast-transport-belt"
+    ],
+    "nuclear-reactor": [
+      "nuclear-reactor"
+    ],
+    "flamethrower-turret": [
+      "flamethrower-turret"
+    ],
+    "fluid-wagon": [
+      "fluid-wagon"
+    ],
+    "logistic-robot": [
+      "logistic-robot"
+    ],
+    "advanced-circuit": [
+      "advanced-circuit"
+    ],
+    "sulfur": [
+      "sulfur"
+    ],
+    "power-armor-mk2": [
+      "power-armor-mk2"
+    ],
+    "express-splitter": [
+      "express-splitter"
+    ],
+    "chemical-science-pack": [
+      "chemical-science-pack"
+    ],
+    "express-loader": [
+      "express-loader"
+    ],
+    "effectivity-module-3": [
+      "effectivity-module-3"
+    ],
+    "small-plane": [
+      "small-plane"
+    ],
+    "fast-underground-belt": [
+      "fast-underground-belt"
+    ],
+    "train-stop": [
+      "train-stop"
+    ],
+    "belt-immunity-equipment": [
+      "belt-immunity-equipment"
+    ],
+    "production-science-pack": [
+      "production-science-pack"
+    ],
+    "locomotive": [
+      "locomotive"
+    ],
+    "military-science-pack": [
+      "military-science-pack"
+    ],
+    "gun-turret": [
+      "gun-turret"
+    ],
+    "fast-splitter": [
+      "fast-splitter"
+    ],
+    "underground-belt": [
+      "underground-belt"
+    ],
+    "railgun": [
+      "railgun"
+    ],
+    "electronic-circuit": [
+      "electronic-circuit"
+    ],
+    "explosive-uranium-cannon-shell": [
+      "explosive-uranium-cannon-shell"
+    ],
+    "logistic-chest-passive-provider": [
+      "logistic-chest-passive-provider"
+    ],
+    "land-mine": [
+      "land-mine"
+    ],
+    "gate": [
+      "gate"
+    ],
+    "flamethrower": [
+      "flamethrower"
+    ],
+    "modular-armor": [
+      "modular-armor"
+    ],
+    "explosive-cannon-shell": [
+      "explosive-cannon-shell"
+    ],
+    "uranium-cannon-shell": [
+      "uranium-cannon-shell"
+    ],
+    "small-electric-pole": [
+      "small-electric-pole"
+    ],
+    "burner-mining-drill": [
+      "burner-mining-drill"
+    ],
+    "artillery-targeting-remote": [
+      "artillery-targeting-remote"
+    ],
+    "iron-chest": [
+      "iron-chest"
+    ],
+    "offshore-pump": [
+      "offshore-pump"
+    ],
+    "electric-energy-interface": [
+      "electric-energy-interface"
+    ],
+    "personal-roboport-mk2-equipment": [
+      "personal-roboport-mk2-equipment"
+    ],
+    "radar": [
+      "radar"
+    ],
+    "piercing-rounds-magazine": [
+      "piercing-rounds-magazine"
+    ],
+    "utility-science-pack": [
+      "utility-science-pack"
+    ],
+    "fast-loader": [
+      "fast-loader"
+    ],
+    "speed-module-2": [
+      "speed-module-2"
+    ],
+    "stone-furnace": [
+      "stone-furnace"
+    ],
+    "medium-electric-pole": [
+      "medium-electric-pole"
+    ],
+    "electric-mining-drill": [
+      "electric-mining-drill"
+    ],
+    "atomic-bomb": [
+      "atomic-bomb"
+    ],
+    "rocket-control-unit": [
+      "rocket-control-unit"
+    ],
+    "engine-unit": [
+      "engine-unit"
+    ],
+    "player-port": [
+      "player-port"
+    ],
+    "firearm-magazine": [
+      "firearm-magazine"
+    ],
+    "tank": [
+      "tank"
+    ],
+    "steel-furnace": [
+      "steel-furnace"
+    ],
+    "refined-hazard-concrete": [
+      "refined-hazard-concrete"
+    ],
+    "flying-robot-frame": [
+      "flying-robot-frame"
+    ],
+    "cannon-shell": [
+      "cannon-shell"
+    ],
+    "shotgun-shell": [
+      "shotgun-shell"
+    ],
+    "solid-fuel": [
+      "solid-fuel-from-petroleum-gas",
+      "solid-fuel-from-light-oil",
+      "solid-fuel-from-heavy-oil"
+    ],
+    "empty-barrel": [
+      "empty-barrel"
+    ],
+    "fast-inserter": [
+      "fast-inserter"
+    ],
+    "effectivity-module-2": [
+      "effectivity-module-2"
+    ],
+    "burner-inserter": [
+      "burner-inserter"
+    ],
+    "productivity-module-3": [
+      "productivity-module-3"
+    ],
+    "slowdown-capsule": [
+      "slowdown-capsule"
+    ],
+    "rocket-fuel": [
+      "rocket-fuel"
+    ],
+    "steam-engine": [
+      "steam-engine"
+    ],
+    "solar-panel": [
+      "solar-panel"
+    ],
+    "steam-turbine": [
+      "steam-turbine"
+    ],
+    "logistic-science-pack": [
+      "logistic-science-pack"
+    ],
+    "exoskeleton-equipment": [
+      "exoskeleton-equipment"
+    ],
+    "discharge-defense-equipment": [
+      "discharge-defense-equipment"
+    ],
+    "laser-turret": [
+      "laser-turret"
+    ],
+    "copper-cable": [
+      "copper-cable"
+    ],
+    "battery-mk2-equipment": [
+      "battery-mk2-equipment"
+    ],
+    "assembling-machine-3": [
+      "assembling-machine-3"
+    ]
+  }
+}
