@@ -123,7 +123,7 @@ var factorio = {
       row.insertCell(-1).textContent = prodPS.toFixed(2)
       row.insertCell(-1).textContent = (prodPS * 60).toFixed(2)
 
-      row.insertCell(-1).textContent = `${((prodPS / itemCraftPS) * 100).toFixed(2)}%`
+      row.insertCell(-1).textContent = (prodPS / itemCraftPS).toFixed(2)
     }
   }
 }
