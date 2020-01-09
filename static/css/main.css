@@ -11,3 +11,18 @@
 body {
 	margin: 1em;
 }
+
+th .popover {
+	font-weight: normal;
+	text-align: left;
+}
+
+th .popover > span {
+	cursor: help;
+	border-bottom: 1px dotted black;
+}
+
+th .popover .popover-container {
+	left: -10em;
+	top: 15em;
+}
