@@ -45,6 +45,29 @@
         }
       }
     },
+    "uranium-mining": {
+      "normal": {
+        "time": 2,
+        "ingredients": {
+          "sulfuric-acid": 1
+        },
+        "results": {
+          "uranium-ore": 1
+        }
+      }
+    },
+    "uranium-processing": {
+      "normal": {
+        "time": 12,
+        "ingredients": {
+          "uranium-ore": 10
+        },
+        "results": {
+          "uranium-235": 0.007,
+          "uranium-238": 0.993
+        }
+      }
+    },
     "extract-crude-oil": {
       "normal": {
         "time": 1,
@@ -95,6 +118,7 @@
     "copper-ore": ["copper-mining"],
     "coal": ["coal-mining"],
     "stone": ["stone-mining"],
+    "uranium-ore": ["uranium-mining"],
     "crude-oil": ["extract-crude-oil"],
     "steam": ["steam-from-boiler", "steam-from-heat-exchanger"],
     "space-science-pack": ["satellite-launch"]
