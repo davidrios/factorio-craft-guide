@@ -1,4 +1,4 @@
-var factorio = {
+const factorio = {
   db: {},
   locale: {},
   selectedRecipes: {},
@@ -18,6 +18,32 @@ var factorio = {
             factorio.db.recipes = { ...factorio.db.recipes, ...extradb.recipes }
             factorio.db.items = { ...factorio.db.items, ...extradb.items }
             factorio.locale = locale
+
+            for (const recipeId in factorio.db.recipes) {
+              const recipe = factorio.db.recipes[recipeId]
+
+              for (const mode of ['normal', 'expensive']) {
+                if (recipe[mode] == null) {
+                  continue
+                }
+
+                const recipeMode = recipe[mode]
+
+                for (const ingrId in recipeMode.ingredients) {
+                  if (recipeMode.results[ingrId] == null) {
+                    continue
+                  }
+
+                  if (recipeMode.results[ingrId] > recipeMode.ingredients[ingrId]) {
+                    recipeMode.results[ingrId] -= recipeMode.ingredients[ingrId]
+                    delete recipeMode.ingredients[ingrId]
+                  } else {
+                    recipeMode.ingredients[ingrId] -= recipeMode.results[ingrId]
+                    delete recipeMode.results[ingrId]
+                  }
+                }
+              }
+            }
 
             factorio.setupInputs()
 
@@ -97,7 +123,7 @@ var factorio = {
 
     itemsList.push(item)
 
-    for (var ingrId in item.recipe.ingredients) {
+    for (const ingrId in item.recipe.ingredients) {
       const ingrQty = item.recipe.ingredients[ingrId]
       const itemCraftAmount = item.recipe.results[item.id]
 
