@@ -82,7 +82,17 @@ var factorio = {
         id: recipeId,
         ...recipeMode
       },
-      alternativeRecipes: recipes
+      alternativeRecipes: recipes,
+      excess: Object.entries(recipeMode.results)
+        .reduce(
+          (result, [rid, rvalue]) => {
+            if (rid !== id) {
+              result[rid] = rvalue
+            }
+            return result
+          },
+          {}
+        )
     }
 
     itemsList.push(item)
@@ -130,13 +140,30 @@ var factorio = {
     }
 
     const aggregated = {}
+    const excess = {}
+
     for (const item of itemWithComponents) {
       if (aggregated[item.id] == null) {
         aggregated[item.id] = { ...item, craftLevel: 2, alternativeRecipes: [] }
-        continue
+      } else {
+        aggregated[item.id].neededQty += item.neededQty
       }
 
-      aggregated[item.id].neededQty += item.neededQty
+      for (const excessId in item.excess) {
+        if (excess[excessId] == null) {
+          excess[excessId] = {
+            id: excessId,
+            name: factorio.locale[excessId],
+            index: 0,
+            craftLevel: 2,
+            neededQty: item.excess[excessId],
+            recipe: item.recipe,
+            alternativeRecipes: []
+          }
+        } else {
+          excess[excessId].neededQty += item.neededQty
+        }
+      }
     }
 
     itemWithComponents.push({ id: '_aggregated' })
@@ -145,6 +172,19 @@ var factorio = {
     itemWithComponents = itemWithComponents.concat(
       Object
         .values(aggregated)
+        .map(item => {
+          lastIndex += 1
+          item.index = lastIndex
+          return item
+        })
+        .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
+    )
+
+    itemWithComponents.push({ id: '_excess' })
+
+    itemWithComponents = itemWithComponents.concat(
+      Object
+        .values(excess)
         .map(item => {
           lastIndex += 1
           item.index = lastIndex
@@ -164,6 +204,12 @@ var factorio = {
 
       if (item.id === '_aggregated') {
         itemNameCell.innerHTML = '<strong>Aggregated</strong>'
+        itemNameCell.colSpan = 8
+        continue
+      }
+
+      if (item.id === '_excess') {
+        itemNameCell.innerHTML = '<strong>Excess production</strong>'
         itemNameCell.colSpan = 8
         continue
       }
