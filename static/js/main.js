@@ -1,4 +1,4 @@
-var factorio = {
+const factorio = {
   db: {},
   locale: {},
   selectedRecipes: {},
@@ -8,7 +8,7 @@ var factorio = {
       .all([
         fetch('static/basedb.json'),
         fetch('static/extradb.json'),
-        fetch('static/locale-en.json')
+        fetch('static/locale.json')
       ])
       .then((values) => {
         Promise
@@ -18,6 +18,32 @@ var factorio = {
             factorio.db.recipes = { ...factorio.db.recipes, ...extradb.recipes }
             factorio.db.items = { ...factorio.db.items, ...extradb.items }
             factorio.locale = locale
+
+            for (const recipeId in factorio.db.recipes) {
+              const recipe = factorio.db.recipes[recipeId]
+
+              for (const mode of ['normal', 'expensive']) {
+                if (recipe[mode] == null) {
+                  continue
+                }
+
+                const recipeMode = recipe[mode]
+
+                for (const ingrId in recipeMode.ingredients) {
+                  if (recipeMode.results[ingrId] == null) {
+                    continue
+                  }
+
+                  if (recipeMode.results[ingrId] > recipeMode.ingredients[ingrId]) {
+                    recipeMode.results[ingrId] -= recipeMode.ingredients[ingrId]
+                    delete recipeMode.ingredients[ingrId]
+                  } else {
+                    recipeMode.ingredients[ingrId] -= recipeMode.results[ingrId]
+                    delete recipeMode.results[ingrId]
+                  }
+                }
+              }
+            }
 
             factorio.setupInputs()
 
@@ -82,12 +108,22 @@ var factorio = {
         id: recipeId,
         ...recipeMode
       },
-      alternativeRecipes: recipes
+      alternativeRecipes: recipes,
+      excess: Object.entries(recipeMode.results)
+        .reduce(
+          (result, [rid, rvalue]) => {
+            if (rid !== id) {
+              result[rid] = rvalue
+            }
+            return result
+          },
+          {}
+        )
     }
 
     itemsList.push(item)
 
-    for (var ingrId in item.recipe.ingredients) {
+    for (const ingrId in item.recipe.ingredients) {
       const ingrQty = item.recipe.ingredients[ingrId]
       const itemCraftAmount = item.recipe.results[item.id]
 
@@ -130,13 +166,30 @@ var factorio = {
     }
 
     const aggregated = {}
+    const excess = {}
+
     for (const item of itemWithComponents) {
       if (aggregated[item.id] == null) {
         aggregated[item.id] = { ...item, craftLevel: 2, alternativeRecipes: [] }
-        continue
+      } else {
+        aggregated[item.id].neededQty += item.neededQty
       }
 
-      aggregated[item.id].neededQty += item.neededQty
+      for (const excessId in item.excess) {
+        if (excess[excessId] == null) {
+          excess[excessId] = {
+            id: excessId,
+            name: factorio.locale[excessId],
+            index: 0,
+            craftLevel: 2,
+            neededQty: item.excess[excessId],
+            recipe: item.recipe,
+            alternativeRecipes: []
+          }
+        } else {
+          excess[excessId].neededQty += item.neededQty
+        }
+      }
     }
 
     itemWithComponents.push({ id: '_aggregated' })
@@ -145,6 +198,19 @@ var factorio = {
     itemWithComponents = itemWithComponents.concat(
       Object
         .values(aggregated)
+        .map(item => {
+          lastIndex += 1
+          item.index = lastIndex
+          return item
+        })
+        .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
+    )
+
+    itemWithComponents.push({ id: '_excess' })
+
+    itemWithComponents = itemWithComponents.concat(
+      Object
+        .values(excess)
         .map(item => {
           lastIndex += 1
           item.index = lastIndex
@@ -164,6 +230,12 @@ var factorio = {
 
       if (item.id === '_aggregated') {
         itemNameCell.innerHTML = '<strong>Aggregated</strong>'
+        itemNameCell.colSpan = 8
+        continue
+      }
+
+      if (item.id === '_excess') {
+        itemNameCell.innerHTML = '<strong>Excess production</strong>'
         itemNameCell.colSpan = 8
         continue
       }
