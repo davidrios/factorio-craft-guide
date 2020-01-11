@@ -2,6 +2,7 @@ const factorio = {
   db: {},
   locale: {},
   selectedRecipes: {},
+  collapsed: {},
   setup () {
     document.getElementsByTagName('body')[0].classList.add('loading', 'loading-lg')
     Promise
@@ -55,6 +56,7 @@ const factorio = {
     const el = document.getElementById('item-select')
     el.addEventListener('change', function (ev) {
       factorio.selectedRecipes = {}
+      factorio.collapsed = {}
       factorio.redrawTable()
     })
 
@@ -83,14 +85,13 @@ const factorio = {
       factorio.redrawTable()
     })
   },
-  getItemWithComponents (id, mode = 'normal', selectedRecipes = {}, lastCraftLevel = 0, neededQty = null, lastIndex = -1) {
-    const craftLevel = lastCraftLevel + 1
-    let index = lastIndex + 1
-
+  getItemWithComponents (id, mode = 'normal', neededQty = null, parentPath = '') {
     let itemsList = []
 
+    const path = parentPath + '/' + id
+
     const recipes = factorio.db.items[id]
-    const recipeId = selectedRecipes[index] || recipes[0]
+    const recipeId = factorio.selectedRecipes[path] || recipes[0]
     const recipe = factorio.db.recipes[recipeId]
     const recipeMode = (recipe[mode] != null ? recipe[mode] : recipe.normal)
 
@@ -101,8 +102,8 @@ const factorio = {
     const item = {
       id: id,
       name: factorio.locale[id],
-      index: index,
-      craftLevel: craftLevel,
+      path: path,
+      children: false,
       neededQty: neededQty,
       recipe: {
         id: recipeId,
@@ -124,6 +125,8 @@ const factorio = {
     itemsList.push(item)
 
     for (const ingrId in item.recipe.ingredients) {
+      item.children = true
+
       const ingrQty = item.recipe.ingredients[ingrId]
       const itemCraftAmount = item.recipe.results[item.id]
 
@@ -131,17 +134,32 @@ const factorio = {
         factorio.getItemWithComponents(
           ingrId,
           mode,
-          selectedRecipes,
-          craftLevel,
           (ingrQty / itemCraftAmount) * neededQty,
-          index
+          path
         )
       )
-
-      index = itemsList[itemsList.length - 1].index
     }
 
     return itemsList
+  },
+  handleCollapseExpand (ev) {
+    if (factorio.collapsed[ev.target.dataset.path] === undefined) {
+      factorio.collapsed[ev.target.dataset.path] = true
+    } else {
+      delete factorio.collapsed[ev.target.dataset.path]
+    }
+
+    factorio.redrawTable()
+  },
+  handleSelectRecipe (ev) {
+    const targetPath = ev.target.dataset.path
+    for (const selectedPath in factorio.selectedRecipes) {
+      if (selectedPath.indexOf(targetPath) === 0) {
+        delete factorio.selectedRecipes[selectedPath]
+      }
+    }
+    factorio.selectedRecipes[targetPath] = ev.target.value
+    factorio.redrawTable()
   },
   redrawTable () {
     const tbody = document.getElementById('item-info-table-body')
@@ -154,8 +172,7 @@ const factorio = {
 
     let itemWithComponents = factorio.getItemWithComponents(
       itemName,
-      document.getElementById('mode-select').value,
-      factorio.selectedRecipes
+      document.getElementById('mode-select').value
     )
     let desiredQty = parseFloat(document.getElementById('desired-qty').value)
     if (isNaN(desiredQty)) {
@@ -165,105 +182,105 @@ const factorio = {
       desiredQty = desiredQty / 60
     }
 
-    const aggregated = {}
-    const excess = {}
+    const extras = { _aggregated: {}, _excess: {} }
 
     for (const item of itemWithComponents) {
-      if (aggregated[item.id] == null) {
-        aggregated[item.id] = { ...item, craftLevel: 2, alternativeRecipes: [] }
+      if (extras._aggregated[item.id] == null) {
+        extras._aggregated[item.id] = {
+          ...item,
+          path: '/_aggregated/' + item.id,
+          children: false,
+          alternativeRecipes: []
+        }
       } else {
-        aggregated[item.id].neededQty += item.neededQty
+        extras._aggregated[item.id].neededQty += item.neededQty
       }
 
       for (const excessId in item.excess) {
-        if (excess[excessId] == null) {
-          excess[excessId] = {
+        if (extras._excess[excessId] == null) {
+          extras._excess[excessId] = {
             id: excessId,
             name: factorio.locale[excessId],
-            index: 0,
-            craftLevel: 2,
+            path: '/_excess/' + item.id,
+            children: false,
             neededQty: item.excess[excessId],
             recipe: item.recipe,
             alternativeRecipes: []
           }
         } else {
-          excess[excessId].neededQty += item.neededQty
+          extras._excess[excessId].neededQty += item.neededQty
         }
       }
     }
 
-    itemWithComponents.push({ id: '_aggregated' })
+    for (const extra in extras) {
+      itemWithComponents.push({
+        id: extra,
+        name: { _aggregated: 'Aggregated', _excess: 'Excess production' }[extra],
+        path: '/' + extra,
+        children: Object.keys(extras[extra]).length > 0
+      })
 
-    let lastIndex = itemWithComponents[itemWithComponents.length - 1].index
-    itemWithComponents = itemWithComponents.concat(
-      Object
-        .values(aggregated)
-        .map(item => {
-          lastIndex += 1
-          item.index = lastIndex
-          return item
-        })
-        .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
-    )
-
-    itemWithComponents.push({ id: '_excess' })
-
-    itemWithComponents = itemWithComponents.concat(
-      Object
-        .values(excess)
-        .map(item => {
-          lastIndex += 1
-          item.index = lastIndex
-          return item
-        })
-        .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
-    )
+      itemWithComponents = itemWithComponents.concat(
+        Object
+          .values(extras[extra])
+          .sort((a, b) => (factorio.locale[a.id] || a.id).localeCompare(factorio.locale[b.id] || b.id))
+      )
+    }
 
     const mainItem = itemWithComponents[0]
     const mainProductCraftPS = mainItem.recipe.results[mainItem.id] / mainItem.recipe.time
     const productionSpeed = desiredQty / mainProductCraftPS
 
-    for (const item of itemWithComponents) {
+    loop1: for (const item of itemWithComponents) {
+      for (const collapsedPath in factorio.collapsed) {
+        if (item.path !== collapsedPath && item.path.indexOf(collapsedPath) === 0) {
+          continue loop1
+        }
+      }
+
       const row = tbody.insertRow()
 
       const itemNameCell = row.insertCell(-1)
 
-      if (item.id === '_aggregated') {
-        itemNameCell.innerHTML = '<strong>Aggregated</strong>'
+      const pathSize = item.path.split('/')
+      if (pathSize.length > 2) {
+        itemNameCell.appendChild(document.createTextNode(`${' '.repeat(pathSize.length - 3)}↳ `))
+      }
+
+      if (item.children) {
+        const collapseExpand = document.createElement('a')
+        collapseExpand.classList.add('collapse-expand-button')
+        collapseExpand.textContent = factorio.collapsed[item.path] != null ? '+' : '-'
+        collapseExpand.dataset.path = item.path
+        collapseExpand.addEventListener('click', factorio.handleCollapseExpand)
+
+        itemNameCell.appendChild(collapseExpand)
+      }
+
+      itemNameCell.appendChild(document.createTextNode(item.name))
+
+      if (extras[item.id] != null) {
         itemNameCell.colSpan = 8
+        itemNameCell.classList.add('bold-text')
         continue
       }
 
-      if (item.id === '_excess') {
-        itemNameCell.innerHTML = '<strong>Excess production</strong>'
-        itemNameCell.colSpan = 8
-        continue
-      }
-
-      itemNameCell.textContent = item.craftLevel === 1 ? item.name : `${' '.repeat(item.craftLevel - 2)}↳ ${item.name}`
       if (item.alternativeRecipes.length > 1) {
         itemNameCell.appendChild(document.createTextNode(' '))
 
         const select = document.createElement('select')
-        select.name = `select-recipe-${item.craftLevel}`
+        select.dataset.path = item.path
 
         for (const alternativeRecipe of item.alternativeRecipes) {
           const option = document.createElement('option')
           option.text = factorio.locale[alternativeRecipe] || alternativeRecipe
           option.value = alternativeRecipe
-          option.selected = factorio.selectedRecipes[item.index] === alternativeRecipe
+          option.selected = factorio.selectedRecipes[item.path] === alternativeRecipe
           select.add(option)
         }
 
-        select.addEventListener('change', function () {
-          factorio.selectedRecipes[item.index] = select.value
-          for (const selectedIndex in factorio.selectedRecipes) {
-            if (selectedIndex > item.index) {
-              delete factorio.selectedRecipes[selectedIndex]
-            }
-          }
-          factorio.redrawTable()
-        })
+        select.addEventListener('change', factorio.handleSelectRecipe)
 
         itemNameCell.appendChild(select)
       }
